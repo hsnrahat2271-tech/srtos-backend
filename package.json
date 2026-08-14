@@ -1,0 +1,27 @@
+{
+  "name": "srtos-qld",
+  "version": "1.0.0",
+  "description": "SRTOS QLD - Smart Transport & Route Operations System for Queensland. Real-time transit planning with Translink GTFS-Realtime, QLD Traffic API, and Project OSRM routing.",
+  "type": "module",
+  "main": "server.mjs",
+  "scripts": {
+    "start": "node server.mjs",
+    "dev": "NODE_ENV=development node server.mjs",
+    "test": "node api_test.mjs"
+  },
+  "keywords": [
+    "transport",
+    "transit",
+    "routing",
+    "real-time",
+    "queensland",
+    "gtfs",
+    "osrm"
+  ],
+  "author": "Rahat",
+  "license": "MIT",
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "dependencies": {}
+}
