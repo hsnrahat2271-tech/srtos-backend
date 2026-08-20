@@ -185,6 +185,6 @@ export function createServer() {
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
   const server = createServer();
   server.listen(config.port, "127.0.0.1", () => {
-    console.log(`SRTOS-QLD prototype running at http://127.0.0.1:${config.port}`);
+    console.log(`SRTOS-QLD prototype running at http://0.0.0.0:${config.port}`);
   });
 }
