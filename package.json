@@ -1,27 +1,23 @@
 {
-  "name": "srtos-qld",
-  "version": "1.0.0",
-  "description": "SRTOS QLD - Smart Transport & Route Operations System for Queensland. Real-time transit planning with Translink GTFS-Realtime, QLD Traffic API, and Project OSRM routing.",
+  "name": "srtos-qld-a3-mysql-api",
+  "version": "3.0.0",
+  "private": true,
   "type": "module",
-  "main": "server.mjs",
+  "description": "Assessment 3 MySQL account/profile/saved-route/alerts/notification API for SRTOS QLD",
   "scripts": {
-    "start": "node server.mjs",
-    "dev": "NODE_ENV=development node server.mjs",
-    "test": "node api_test.mjs"
+    "start": "node --env-file=.env server.mjs",
+    "dev": "node --env-file=.env --watch server.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "check": "node --check server.mjs && node --check src/app.mjs && node --check src/mysql-repository.mjs && node --check src/security.mjs",
+    "smoke:mysql": "node --env-file=.env scripts/mysql-smoke.mjs",
+    "check:schema": "node scripts/check-schema.mjs"
   },
-  "keywords": [
-    "transport",
-    "transit",
-    "routing",
-    "real-time",
-    "queensland",
-    "gtfs",
-    "osrm"
-  ],
-  "author": "Rahat",
-  "license": "MIT",
   "engines": {
-    "node": ">=16.0.0"
+    "node": ">=20"
   },
-  "dependencies": {}
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^9.0.2",
+    "mysql2": "^3.14.5"
+  }
 }

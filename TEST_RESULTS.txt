@@ -1,0 +1,18 @@
+SRTOS QLD A3 BACKEND STATIC/APPLICATION VERIFICATION
+
+npm run check: PASS
+npm test: PASS — 10/10 tests, 0 failed
+
+Covered:
+1. Health identifies Assessment 3 / MySQL.
+2. Registration, login and HttpOnly session cookie.
+3. Profile persistence.
+4. Saved-route create/favourite/use/delete.
+5. Cross-user saved-route isolation.
+6. Alert-preference validation/persistence.
+7. Route-matched personal notifications.
+8. Bad password / unauthenticated / logout / CORS enforcement.
+9. Source alerts stored/retrieved separately from notifications.
+10. Cross-user profile/notification isolation.
+
+Real MySQL gate: `npm run smoke:mysql` must be run on the actual demo laptop after schema setup. It verifies all 6 tables plus insert/select/rollback.
